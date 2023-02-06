@@ -1,0 +1,16 @@
+def linear_search(list, target):
+    i = 0
+    while i < len(list):
+        if list[i] == target:
+            return i
+        i += 1
+    return -1
+
+list = [11, 22, 33, 44, 55, 66, 77, 88, 99]
+i = 4
+result = linear_search(list, i)
+if result != -1:
+    print("Element is present at index",result)
+else:
+    print ("element is not present")
+
