@@ -1,0 +1,22 @@
+def binary_search(card_data, search_value):
+    first = 0
+    last = len(card_data) - 1
+    found = False
+    while (first <= last) and not found:
+        midpoint = (first + last) // 2
+        if card_data[midpoint] == search_value:
+            found = True
+        else:
+            if search_value < card_data[midpoint]:
+                last = midpoint - 1
+            else:
+                first = midpoint + 1
+    if found:
+        print("The search value was found.")
+    else:
+        print("The search value was not found.")
+
+card_data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+search_value = 6
+binary_search(card_data, search_value)
+
